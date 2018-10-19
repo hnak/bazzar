@@ -1,26 +1,31 @@
-# my-app
+# bazzar
 
 ## Project setup
 ```
-npm install
+yarn install
 ```
 
-### Compiles and hot-reloads for development
+### ローカル起動
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+yarn serve
 ```
 
-### Run your tests
+### ビルド
 ```
-npm run test
+yarn build
 ```
 
 ### Lints and fixes files
 ```
-npm run lint
+yarn lint
+```
+
+### Firebaseへのデプロイ
+```
+firebase deploy
+```
+#### 初回はFirebaseToolをインストールしてください。
+```
+yarn global add firebase-tools
+firebase login
 ```
