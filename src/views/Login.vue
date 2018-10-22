@@ -2,27 +2,28 @@
   <section class="hero is-fullheight is-primary is-bold">
     <div class="hero-body">
       <div class="container has-text-centered">
-        <h1 class="title">BAZZAR</h1>
-        <p class="subtitle">decentralized blockchain EC application.</p>
+        <h1 class="title">ログイン</h1>
         <div class="column is-4 is-offset-4">
           <div class="box">
-            <b-field 
-              :type="$v.loginId.$error ? 'is-danger': ''" 
+            <b-field
+              :type="$v.loginId.$error ? 'is-danger': ''"
               :message="$v.loginId.$error ? $t('common.message.requiredField') : ''" 
+              label="メールアドレスまたはアカウント" 
             >
               <b-input
                 ref="loginId"
                 v-model="loginId"
-                placeholder="ログインID"
                 maxlength="30"
                 @blur="$v.loginId.$touch"
               />
             </b-field>
-            <b-field>
+            <b-field
+              label="パスワード"
+            >
               <b-input
                 ref="password"
                 v-model="password"
-                placeholder="パスワード"
+                placeholder="半角英数8文字以上"
                 required
                 type="password"
                 maxlength="30" 
@@ -32,7 +33,7 @@
               :class="{ 'is-loading': loading }"
               class="button is-fullwidth is-primary"
               type="submit"
-              @click="hoge()">LOGIN</a>
+              @click="login()">ログイン</a>
           </div>
           <a
             :class="{ 'is-loading': loading }"
@@ -66,9 +67,6 @@ export default class Login extends Vue {
   error = false;
   loading = false;
 
-  hoge() {
-    this.$v.$touch();
-  }
   async login() {
     this.validate();
     this.loading = true;
@@ -119,3 +117,10 @@ export default class Login extends Vue {
   }
 }
 </script>
+<style lang="scss">
+.label {
+  font-weight: 200;
+  text-align: left;
+  font-size: 0.5rem;
+}
+</style>

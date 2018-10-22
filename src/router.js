@@ -1,8 +1,9 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import LogoFrame from './views/LogoFrame.vue';
 import Login from './views/Login.vue';
 import SignUp from './views/SignUp.vue';
-import BaseLayout from './views/BaseLayout.vue';
+import MenuFrame from './views/MenuFrame.vue';
 import MyPage from './views/MyPage.vue';
 import Top from './views/Top.vue';
 import OAuthSample from './views/OAuthSample.vue';
@@ -17,16 +18,22 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      component: BaseLayout,
+      component: LogoFrame,
+      children: [
+        { path: '/login', component: Login },
+        { path: '/signup', component: SignUp },
+        { path: '/oauth', component: OAuthSample }
+      ]
+    },
+    {
+      path: '/',
+      component: MenuFrame,
       meta: { requiresAuth: true },
       children: [
         { path: '/', component: Top },
         { path: '/mypage', component: MyPage }
       ]
-    },
-    { path: '/login', component: Login },
-    { path: '/signup', component: SignUp },
-    { path: '/oauth', component: OAuthSample }
+    }
   ]
 });
 
