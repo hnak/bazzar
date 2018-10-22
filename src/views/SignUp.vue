@@ -7,9 +7,9 @@
           <div class="box">
             <b-field>
               <b-input
-                placeholder="ログインID"
                 ref="loginId"
                 v-model="loginId"
+                placeholder="ログインID"
                 required
                 type="email"
                 maxlength="30"
@@ -17,18 +17,18 @@
             </b-field>
             <b-field>
               <b-input
-                placeholder="ユーザー名"
                 ref="userName"
                 v-model="userName"
+                placeholder="ユーザー名"
                 required
                 maxlength="30"
               />
             </b-field>
             <b-field>
               <b-input
-                placeholder="パスワード"
                 ref="password"
                 v-model="password"
+                placeholder="パスワード"
                 required
                 type="password"
                 maxlength="30"
@@ -44,8 +44,8 @@
               />
             </b-field>
             <a
+              :class="{ 'is-loading': loading }"
               class="button is-fullwidth is-primary"
-              v-bind:class="{ 'is-loading': loading }"
               type="submit"
               @click="signUp()"
             >

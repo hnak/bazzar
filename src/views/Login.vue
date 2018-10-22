@@ -6,40 +6,39 @@
         <p class="subtitle">decentralized blockchain EC application.</p>
         <div class="column is-4 is-offset-4">
           <div class="box">
-            <b-field>
+            <b-field 
+              :type="$v.loginId.$error ? 'is-danger': ''" 
+              :message="$v.loginId.$error ? $t('common.message.requiredField') : ''" 
+            >
               <b-input
-                placeholder="ログインID"
                 ref="loginId"
                 v-model="loginId"
-                required
-                type="email"
+                placeholder="ログインID"
                 maxlength="30"
+                @blur="$v.loginId.$touch"
               />
             </b-field>
             <b-field>
               <b-input
-                placeholder="パスワード"
                 ref="password"
                 v-model="password"
+                placeholder="パスワード"
                 required
                 type="password"
-                maxlength="30"
-                password-reveal
-              />
+                maxlength="30" 
+                password-reveal/>
             </b-field>
             <a
+              :class="{ 'is-loading': loading }"
               class="button is-fullwidth is-primary"
-              v-bind:class="{ 'is-loading': loading }"
               type="submit"
-              @click="login()"
-            >LOGIN</a>
+              @click="hoge()">LOGIN</a>
           </div>
           <a
+            :class="{ 'is-loading': loading }"
             class="button is-fullwidth is-outlined is-rounded is-inverted is-primary"
-            v-bind:class="{ 'is-loading': loading }"
             type="submit"
-            @click="$router.push('/signup')"
-          >SIGN UP</a>
+            @click="$router.push('/signup')">SIGN UP</a>
         </div>
       </div>
     </div>
@@ -50,8 +49,16 @@
 import { Component, Vue } from 'vue-property-decorator';
 import firebaseApp from '@/firebase';
 import LoginRes from '@/models/LoginRes';
+import { validationMixin } from 'vuelidate';
+import { required, maxLength } from 'vuelidate/lib/validators';
 
-@Component
+@Component({
+  mixins: [validationMixin],
+  validations: {
+    loginId: { required, minLength: maxLength(30) },
+    password: { required, minLength: maxLength(30) }
+  }
+})
 export default class Login extends Vue {
   loginId = '';
   password = '';
@@ -59,6 +66,9 @@ export default class Login extends Vue {
   error = false;
   loading = false;
 
+  hoge() {
+    this.$v.$touch();
+  }
   async login() {
     this.validate();
     this.loading = true;

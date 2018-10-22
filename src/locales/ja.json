@@ -1,0 +1,10 @@
+{ 
+  "common": {
+    "message": {
+      "requiredField": "このフィールドを入力してください。"
+    },
+    "label": {
+
+    }
+  }
+}
