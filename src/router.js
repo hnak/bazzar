@@ -18,20 +18,20 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      component: LogoFrame,
-      children: [
-        { path: '/login', component: Login },
-        { path: '/signup', component: SignUp },
-        { path: '/oauth', component: OAuthSample }
-      ]
-    },
-    {
-      path: '/',
       component: MenuFrame,
       meta: { requiresAuth: true },
       children: [
         { path: '/', component: Top },
         { path: '/mypage', component: MyPage }
+      ]
+    },
+    {
+      path: '/',
+      component: LogoFrame,
+      children: [
+        { path: '/login', component: Login },
+        { path: '/signup', component: SignUp },
+        { path: '/oauth', component: OAuthSample }
       ]
     }
   ]
