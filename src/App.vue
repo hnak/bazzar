@@ -10,6 +10,8 @@
 // Set your colors
 $primary: #10a9db;
 $primary-invert: findColorInvert($primary);
+$light: #f7f7f7;
+$light-invert: findColorInvert($light);
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
 $colors: (
   'white': (
@@ -56,4 +58,10 @@ $link-focus-border: $primary;
 // Import Bulma and Buefy styles
 @import '~bulma';
 @import '~buefy/src/scss/buefy';
+.breadcrumb {
+  font-size: 0.85rem;
+}
+html {
+  font-size: 14px;
+}
 </style>

@@ -19,7 +19,7 @@ const router = new Router({
     {
       path: '/',
       component: MenuFrame,
-      meta: { requiresAuth: true },
+      // meta: { requiresAuth: true },
       children: [
         { path: '/', component: Top },
         { path: '/mypage', component: MyPage }
