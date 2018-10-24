@@ -35,8 +35,8 @@ const client = new Client(
   // 'ws://127.0.0.1:46658/queryws'
   // For Test
   'extdev-plasma-us1',
-  'ws://extdev-plasma-us1.dappchains.com:80/websocket',
-  'ws://extdev-plasma-us1.dappchains.com:80/queryws'
+  'wss://extdev-plasma-us1.dappchains.com/websocket',
+  'wss://extdev-plasma-us1.dappchains.com/queryws'
 );
 
 // 関数呼び出し元のアドレス
