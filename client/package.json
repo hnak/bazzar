@@ -12,6 +12,7 @@
     "buefy": "^0.7.0",
     "firebase": "^5.5.5",
     "firebaseui": "^3.4.1",
+    "loom-js": "^1.29.1",
     "node-sass": "^4.9.4",
     "sass-loader": "^7.1.0",
     "vue": "^2.5.17",
@@ -19,7 +20,8 @@
     "vue-property-decorator": "^7.2.0",
     "vue-router": "^3.0.1",
     "vuelidate": "^0.7.4",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "web3": "^1.0.0-beta.36"
   },
   "devDependencies": {
     "@kazupon/vue-i18n-loader": "^0.3.0",

@@ -7,6 +7,7 @@ import MenuFrame from './views/MenuFrame.vue';
 import MyPage from './views/MyPage.vue';
 import Top from './views/Top.vue';
 import OAuthSample from './views/OAuthSample.vue';
+import LoomContractSample from './views/LoomContractSample.vue';
 
 import store from '@/store/index';
 
@@ -22,7 +23,8 @@ const router = new Router({
       // meta: { requiresAuth: true },
       children: [
         { path: '/', component: Top },
-        { path: '/mypage', component: MyPage }
+        { path: '/mypage', component: MyPage },
+        { path: '/loom', component: LoomContractSample }
       ]
     },
     {
