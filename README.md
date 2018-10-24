@@ -22,7 +22,7 @@ yarn lint
 
 ### Firebaseへのデプロイ
 ```
-firebase deploy
+yarn deploy
 ```
 #### 初回はFirebaseToolをインストールしてください。
 ```
