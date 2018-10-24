@@ -17,13 +17,16 @@ curl https://raw.githubusercontent.com/loomnetwork/loom-sdk-documentation/master
 ./loom run
 ```
 
-## Deploy
+## Deploy for local
 ```bash
-truffle deploy --network loom_dapp_chain
+yarn compile
+yarn deploy:local
+```
 
-# Re-deploy
-truffle reset --network loom_dapp_chain
-# Or
-rm -rf build
-truffle deploy --network loom_dapp_chain
+## Deploy for test
+```bash
+# loomのローカル起動は不要
+
+yarn compile
+yarn deploy:test
 ```

@@ -21,14 +21,22 @@ import { Component, Vue } from 'vue-property-decorator';
 import Web3 from 'web3';
 import { Client, LocalAddress, CryptoUtils, LoomProvider } from 'loom-js';
 
-const privateKey = CryptoUtils.generatePrivateKey();
+// const privateKey = CryptoUtils.generatePrivateKey();
+const privateKeyBase64 =
+  '4J4On/kqG74sNyI/aaf7e5599fb7G+d69HIj7yQ/W/UsKkUhUjIG+H7luSNZrnb4dtVeLy5O1m7UaXtCBr/W5g==';
+const privateKey = CryptoUtils.B64ToUint8Array(privateKeyBase64);
 const publicKey = CryptoUtils.publicKeyFromPrivateKey(privateKey);
 
 // クライアントを作成
 const client = new Client(
-  'default',
-  'ws://127.0.0.1:46658/websocket',
-  'ws://127.0.0.1:46658/queryws'
+  // For Local
+  // 'default',
+  // 'ws://127.0.0.1:46658/websocket',
+  // 'ws://127.0.0.1:46658/queryws'
+  // For Test
+  'extdev-plasma-us1',
+  'ws://extdev-plasma-us1.dappchains.com:80/websocket',
+  'ws://extdev-plasma-us1.dappchains.com:80/queryws'
 );
 
 // 関数呼び出し元のアドレス
@@ -64,7 +72,7 @@ const ABI = [
   }
 ];
 
-const contractAddress = '0x6a306d87b755753e9bb6f2759a0d6dc1fa1b3b29';
+const contractAddress = '0xf8cb75a430db19ed86dec67f58e67a936dc4207c';
 
 // Instantiate the contract and let it ready to be used
 const contract = new web3.eth.Contract(ABI, contractAddress, { from });

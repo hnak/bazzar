@@ -4,7 +4,7 @@
 
 <script>
 import { Component, Vue } from 'vue-property-decorator';
-import firebase from 'firebase';
+import firebase from '@/firebase';
 import firebaseui from 'firebaseui';
 import 'firebaseui/dist/firebaseui.css';
 
