@@ -1,14 +1,5 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import LogoFrame from './views/LogoFrame.vue';
-import Login from './views/Login.vue';
-import SignUp from './views/SignUp.vue';
-import MenuFrame from './views/MenuFrame.vue';
-import MyPage from './views/MyPage.vue';
-import Top from './views/Top.vue';
-import OAuthSample from './views/OAuthSample.vue';
-import LoomContractSample from './views/LoomContractSample.vue';
-
 import store from '@/store/index';
 
 Vue.use(Router);
@@ -19,21 +10,21 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      component: MenuFrame,
+      component: () => import('./views/MenuFrame.vue'),
       // meta: { requiresAuth: true },
       children: [
-        { path: '/', component: Top },
-        { path: '/mypage', component: MyPage },
-        { path: '/loom', component: LoomContractSample }
+        { path: '/', component: () => import('./views/Top.vue') },
+        { path: '/mypage', component: () => import('./views/MyPage.vue') },
+        { path: '/loom', component: () => import('./views/LoomContractSample.vue') }
       ]
     },
     {
       path: '/',
-      component: LogoFrame,
+      component: () => import('./views/LogoFrame.vue'),
       children: [
-        { path: '/login', component: Login },
-        { path: '/signup', component: SignUp },
-        { path: '/oauth', component: OAuthSample }
+        { path: '/login', component: () => import('./views/Login.vue') },
+        { path: '/signup', component: () => import('./views/SignUp.vue') },
+        { path: '/oauth', component: () => import('./views/OAuthSample.vue') }
       ]
     }
   ]
