@@ -121,13 +121,13 @@ setting.json
     https://github.com/vuejs/vue-class-component
 
 - ファイル名の形式  
-    Vueファイル、Class定義を行うJSファイルはPascalCaseとしてください。（SignUp.vue, LoginRes.js）  
+    Vueファイル、Class定義を行うJSファイルはPascalCaseとしてください。（SignUp.vue, LoginRes.js）  
     関数を実装しているJSファイルはcamelCaseとしてください。（index.js）  
     CSS/SASSファイルはkebab-caseとしてください。（buefy-build.scss）
 
 - フォルダ名の形式  
     基本的に一単語としてください。  
-    どうしても複数単語となる場合はkebab-caseで命名してください。
+    どうしても複数単語となる場合はkebab-caseで命名してください。
 
 - Lint  
     以下ベースに遵守が難しいものをカスタマイズして適用する。  
