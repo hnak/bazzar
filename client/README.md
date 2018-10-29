@@ -102,6 +102,9 @@ setting.json
 - i18n  
     多言語対応ライブラリ
 
+- ESLint  
+    リントツール。本プロジェクトではVueのrecommendedベースにprettierの定義を使用する。
+
 - Firebase  
     Googleが開発するmBaaSプラットフォーム。
     Clientから直接データベース参照や認証を行うことができる。
@@ -109,8 +112,32 @@ setting.json
 - loom-js  
     Loom DAppチェーン上で実行されるスマートコントラクトと対話するためのライブラリ。
 
-### Development tips
+### Style Guide
+- ES2015(ES6)準拠  
+    ES2015(ES6)の機能・構文をベースに記述してください。
 
+- Decorator for class-style Vue components  
+    Vueファイルはvue-class-componentをコアとした、クラスコンポーネントベースの記述としてください。  
+    https://github.com/vuejs/vue-class-component
+
+- ファイル名の形式  
+    Vueファイル、Class定義を行うJSファイルはPascalCaseとしてください。（SignUp.vue, LoginRes.js）  
+    関数を実装しているJSファイルはcamelCaseとしてください。（index.js）  
+    CSS/SASSファイルはkebab-caseとしてください。（buefy-build.scss）
+
+- フォルダ名の形式  
+    基本的に一単語としてください。  
+    どうしても複数単語となる場合はkebab-caseで命名してください。
+
+- Lint  
+    以下ベースに遵守が難しいものをカスタマイズして適用する。  
+    plugin:vue/recommended  
+    @vue/prettier
+
+- Vue.jsのスタイルガイドは参考程度に適用してください。  
+    https://jp.vuejs.org/v2/style-guide/index.html
+
+### Development tips
 #### ルーティング(vue-router)
 以下のようにパスとVueクラスをマッピングすることでルーティングを定義できます。  
 router.js
