@@ -74,6 +74,7 @@ setting.json
 ```
 
 ### Library
+#### コアライブラリ
 - Vue.js  
     javascriptベースのフロントエンドフレームワーク
 
@@ -105,9 +106,14 @@ setting.json
 - ESLint  
     リントツール。本プロジェクトではVueのrecommendedベースにprettierの定義を使用する。
 
+#### 外部接続ライブラリ
 - Firebase  
     Googleが開発するmBaaSプラットフォーム。
     Clientから直接データベース参照や認証を行うことができる。
+
+- web3
+    Ethereum JavaScript API。
+    HTTPやIPCを使ってローカルまたはリモートのイーサリアムノードとのIFを提供する。
 
 - loom-js  
     Loom DAppチェーン上で実行されるスマートコントラクトと対話するためのライブラリ。
@@ -123,16 +129,22 @@ setting.json
 - ファイル名の形式  
     Vueファイル、Class定義を行うJSファイルはPascalCaseとしてください。（SignUp.vue, LoginRes.js）  
     関数を実装しているJSファイルはcamelCaseとしてください。（index.js）  
-    CSS/SASSファイルはkebab-caseとしてください。（buefy-build.scss）
+    CSS/SCSSファイルはkebab-caseとしてください。（buefy-build.scss）
 
 - フォルダ名の形式  
     基本的に一単語としてください。  
-    どうしても複数単語となる場合はkebab-caseで命名してください。
+    どうしても複数単語となる場合はkebab-caseで命名してください。  
+    view, layout下は適宜ネストしたフォルダを作って問題ありません。
 
 - Lint  
     以下ベースに遵守が難しいものをカスタマイズして適用する。  
     plugin:vue/recommended  
     @vue/prettier
+
+- CSS
+    style定義は基本的にSCSS形式で記述してください。記載場所は```<style>```タグ内か.scssファイルをimportしてください。  
+    特定のページ、コンポーネント特有のCSSはそのファイル内のスタイル領域に記載してください。  
+    グローバルな定義はあまり推奨しませんが、必要な場合はApp.vueに記載してください。（.scssファイルをimportするようにしても良いです）
 
 - Vue.jsのスタイルガイドは参考程度に適用してください。  
     https://jp.vuejs.org/v2/style-guide/index.html

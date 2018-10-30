@@ -10,17 +10,20 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      component: () => import('./views/MenuFrame.vue'),
+      component: () => import('./layout/MenuLayout.vue'),
       // meta: { requiresAuth: true },
       children: [
         { path: '/', component: () => import('./views/Top.vue') },
         { path: '/mypage', component: () => import('./views/MyPage.vue') },
-        { path: '/loom', component: () => import('./views/LoomContractSample.vue') }
+        {
+          path: '/loom',
+          component: () => import('./views/LoomContractSample.vue')
+        }
       ]
     },
     {
       path: '/',
-      component: () => import('./views/LogoFrame.vue'),
+      component: () => import('./layout/LogoLayout.vue'),
       children: [
         { path: '/login', component: () => import('./views/Login.vue') },
         { path: '/signup', component: () => import('./views/SignUp.vue') },

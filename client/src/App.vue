@@ -58,9 +58,6 @@ $link-focus-border: $primary;
 // Import Bulma and Buefy styles
 @import '~bulma';
 @import '~buefy/src/scss/buefy';
-.breadcrumb {
-  font-size: 0.85rem;
-}
 html {
   font-size: 14px;
 }
