@@ -73,7 +73,7 @@ import myfooter from '@/components/MyFooter.vue';
     myfooter
   }
 })
-export default class ShopFrame extends Vue {}
+export default class ShopLayout extends Vue {}
 </script>
 
 <style lang="scss">
