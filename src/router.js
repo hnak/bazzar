@@ -4,9 +4,11 @@ import LogoFrame from './views/LogoFrame.vue';
 import Login from './views/Login.vue';
 import SignUp from './views/SignUp.vue';
 import MenuFrame from './views/MenuFrame.vue';
+import ShopFrame from './views/ShopFrame.vue';
 import MyPage from './views/MyPage.vue';
 import Top from './views/Top.vue';
 import OAuthSample from './views/OAuthSample.vue';
+import ManageProductsList from './views/ManageProductsList.vue';
 
 import store from '@/store/index';
 
@@ -24,6 +26,11 @@ const router = new Router({
         { path: '/', component: Top },
         { path: '/mypage', component: MyPage }
       ]
+    },
+    {
+      path: '/',
+      component: ShopFrame,
+      children: [{ path: '/ManageProductsList', component: ManageProductsList }]
     },
     {
       path: '/',
