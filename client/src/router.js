@@ -1,5 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import ManageProductsList from './views/ManageProductsList.vue';
+
 import store from '@/store/index';
 
 Vue.use(Router);
@@ -20,6 +22,11 @@ const router = new Router({
           component: () => import('./views/LoomContractSample.vue')
         }
       ]
+    },
+    {
+      path: '/',
+      component: () => import('./layout/ShopLayout.vue'),
+      children: [{ path: '/ManageProductsList', component: ManageProductsList }]
     },
     {
       path: '/',
