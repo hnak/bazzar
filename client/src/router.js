@@ -23,6 +23,16 @@ const router = new Router({
     },
     {
       path: '/',
+      component: () => import('./layout/ShopLayout.vue'),
+      children: [
+        {
+          path: '/products',
+          component: () => import('./views/ManageProductsList.vue')
+        }
+      ]
+    },
+    {
+      path: '/',
       component: () => import('./layout/LogoLayout.vue'),
       children: [
         { path: '/login', component: () => import('./views/Login.vue') },
