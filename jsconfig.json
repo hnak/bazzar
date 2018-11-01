@@ -1,5 +1,11 @@
 {
+    "include": ["./client/src/**/*"],
     "compilerOptions": {
-        "experimentalDecorators": true
+        "module": "es2015",
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+        "@/*": ["client/src/*"]
+        }
     }
 }

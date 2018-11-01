@@ -50,6 +50,9 @@
       ]
     },
     "parserOptions": {
+      "ecmaFeatures": {
+        "legacyDecorators": true
+      },
       "parser": "babel-eslint"
     }
   },
