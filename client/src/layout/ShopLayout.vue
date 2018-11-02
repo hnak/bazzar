@@ -1,67 +1,80 @@
 <template>
-  
   <div>
-    <link 
-      rel="stylesheet" 
-      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" 
-      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" 
-      crossorigin="anonymous">
-
-    <!-- START NAV -->
-    <div>
-      <nav class="navbar shop-menu">
-        <div class="container">
-          <div class="navbar-brand">
-            <a 
-              class="navbar-item" 
-              href="../">
-              <img 
-                src="https://bulma.io/images/bulma-logo.png"
-                alt="Logo">
-            </a>
-          </div>
-          <div class="navbar-start">
-            
-            <div class="tabs">
-              <ul>
-                <li class="is-active">
-                  <a>
-                    <img 
-                      src="../assets/home.svg" 
-                      alt="ホーム"
-                      class="menu-image">
-                    <p class="menu-lavel">ホーム</p>
-                  </a>
-                </li>
-                <li>
-                  <a class="button-icon">
-                    <img 
-                      src="../assets/home.svg" 
-                      alt="ホーム">
-                    <div class="menu-lavel">ホーム</div>
-                  </a>
-                </li>
-                <li>
-                  <a class="button-icon">
-                    <img 
-                      src="../assets/home.svg" 
-                      alt="ホーム">
-                    <div class="menu-lavel">ホーム</div>
-                  </a>
-                </li>
-              
-              </ul>
+    <!-- Top bar -->
+    <nav 
+      id="navbarMenu"
+      class="navbar is-primary navbar-menu">
+      <div class="container">
+        <div class="navbar-end"> 
+          <div class="nabvar-item">
+            <div class="container right-side">
+              <a 
+                href="#" 
+                class="has-text-white">ログアウト</a>   
+              <a 
+                href="#" 
+                class="button is-primary is-inverted is-outlined">ショップを見る</a>
             </div>
-            
-
           </div>
         </div>
-      </nav>
-
-      <!-- END NAV -->
-      <router-view/>
-      <myfooter/>
-    </div>
+      </div>
+    </nav>
+    <!-- second nav -->
+    <nav class="navbar shop-menu">
+      <div class="container">
+        <div class="navbar-brand logo-box">
+          <a 
+            class="navbar-item" 
+            href="../">
+            <img 
+              src="https://bulma.io/images/bulma-logo.png"
+              alt="Logo">
+          </a>
+          <!-- burger menu -->
+          <a 
+            role="button" 
+            class="navbar-burger burger" 
+            aria-label="menu" 
+            aria-expanded="false" 
+            data-target="navbarMenu">
+            <span aria-hidden="true"/>
+            <span aria-hidden="true"/>
+            <span aria-hidden="true"/>
+          </a>
+        </div>
+        <!-- shop-menu nav -->
+        <div 
+          id="navbarMenu" 
+          class="navbar-menu">
+          <div class="navbar-start">
+            <b-tabs 
+              size="is-medium"
+              class="block s-tab-item">
+              <b-tab-item 
+                label="ホーム"
+                icon="home-outline"
+                class="border-none"/>
+              <b-tab-item
+                label="出品管理"
+                icon="tag-outline"/>
+              <b-tab-item
+                label="注文管理"
+                icon="clipboard-check-outline"/>
+              <b-tab-item 
+                label="売上レポート"
+                icon="chart-bar"/>
+              <b-tab-item 
+                label="設定"
+                icon="settings-outline"/>
+            </b-tabs>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End nav -->
+    <router-view/>
+    <myfooter/>
+    
 </div></template>
 
 <script>
@@ -77,17 +90,41 @@ export default class ShopLayout extends Vue {}
 </script>
 
 <style lang="scss">
-.shop-menu {
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #e4e4e4;
+.right-side {
+  text-align: right;
+  padding: 0.4rem 0;
 }
 
-.menu-image {
-  width: 32px;
-  height: 32px;
-  margin: 0 auto;
+.right-side a {
+  vertical-align: middle;
+  margin-left: 1rem;
+  font-weight: bold;
 }
-.menu-lavel {
+
+.logo-box {
+  margin-right: 1rem;
+}
+.shop-menu {
+  border-bottom: 1px solid #dbdbdb;
+  margin-bottom: 4rem;
+}
+
+.s-tab-item a {
+  display: block;
+  padding: 0.5rem 0;
+  width: 120px;
+  height: 100px;
+  text-align: center;
+  border-bottom-color: #fff;
+}
+
+.s-tab-item span {
   font-size: 13px;
+  display: block;
+  margin-top: 1.2rem;
+}
+.s-tab-item i {
+  display: inline-block;
+  width: 120px;
 }
 </style>

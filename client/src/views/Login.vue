@@ -1,5 +1,5 @@
 <template>
-  <section class="hero is-fullheight is-primary is-bold">
+  <section class="hero is-fullheight is-bold">
     <div class="hero-body">
       <div class="container has-text-centered">
         <h1 class="title">ログイン</h1>
@@ -121,6 +121,6 @@ export default class Login extends Vue {
 .label {
   font-weight: 200;
   text-align: left;
-  font-size: 0.5rem;
+  font-size: 0.7rem;
 }
 </style>

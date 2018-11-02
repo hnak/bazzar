@@ -1,14 +1,34 @@
 <template>
   <div class="container">
-    <section class="top-image">
-      <img 
-        src="../assets/top_banner.jpg" 
-        alt="新着情報バナー">
-    </section>
-
+    <!-- Top banner -->
+    <div class="hero is-large top-image">
+      <div class="hero-body arrow-box">
+        <div class="level is-mobile">
+          <div class="level-left">
+            <a 
+              href="#"
+              class="to-left">
+              <img 
+                src="../assets/ArrowLeft.svg"
+                alt="to left">
+            </a>
+          </div>
+          <div class="level-right">
+            <a 
+              href="#"
+              class="to-right">
+              <img 
+                src="../assets/ArrowRight.svg"
+                alt="to right">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Title -->
     <section class="new-item">
-      <nav class="level">
-        <h2 class="level-left">新着</h2>
+      <div class="level is-mobile">
+        <h1 class="level-left section-title">新着</h1>
         <div class="level-right">
           <p class="level-item">並べ替え</p>
           <b-field>
@@ -19,367 +39,374 @@
             </b-select>
           </b-field>
         </div>
-      </nav>
-
-      <!-- Grid Item -->
-      <div class="columns is-multiline is-mobile is-variable is-6">
-        <div class="column is-12-mobile is-3-tablet is-one-fifth-desktop">
-          <a href="#"><img 
-            src="../assets/pot.jpg" 
-            alt="電気ポット"></a>
-          <a 
-            href="#" 
-            class="small-name">Shop name</a>
-          <a href="#"><h3 class="goods-name">ティファール 電気ケトル「アプレシア プラス」</h3></a>
-          <h4 class="price">¥ 3,980</h4>
-          <img src="../assets/rating_4.svg">
-          <a 
-            href="#" 
-            class="number-link">（100）</a>
-          <div class="columns is-variable is-2 button-container">
-            <div class="column is-10">
-              <a class="button is-primary is-fullwidth">
-                <span class="icon">
-                  <img 
-                    src="../assets/cart.svg" 
-                    class="right-icon"></span>
-                <span>カートに追加</span>
-              </a>
-            </div>
-            <div class="column is-2">
-              <a class="button has-background-grey-lighter">
-                <span class="icon">
-                  <img 
-                    src="../assets/HeartLine.svg" 
-                    class="right-icon"
-                ></span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="column is-12-mobile is-3-tablet is-one-fifth-desktop">
-          <a href="#"><img 
-            src="../assets/pot.jpg" 
-            alt="電気ポット"></a>
-          <a 
-            href="#" 
-            class="small-name">Shop name</a>
-          <a href="#"><h3 class="goods-name">ティファール 電気ケトル「アプレシア プラス」</h3></a>
-          <h4 class="price">¥ 3,980</h4>
-          <img src="../assets/rating_4.svg">
-          <a 
-            href="#" 
-            class="number-link">（100）</a>
-          <div class="columns is-variable is-2 button-container">
-            <div class="column is-10">
-              <a class="button is-primary is-fullwidth">
-                <span class="icon">
-                  <img 
-                    src="../assets/cart.svg" 
-                    class="right-icon"></span>
-                <span>カートに追加</span>
-              </a>
-            </div>
-            <div class="column is-2">
-              <a class="button has-background-grey-lighter">
-                <span class="icon">
-                  <img 
-                    src="../assets/HeartLine.svg" 
-                    class="right-icon"
-                ></span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="column is-12-mobile is-3-tablet is-one-fifth-desktop">
-          <a href="#"><img 
-            src="../assets/pot.jpg" 
-            alt="電気ポット"></a>
-          <a 
-            href="#" 
-            class="small-name">Shop name</a>
-          <a href="#"><h3 class="goods-name">ティファール 電気ケトル「アプレシア プラス」</h3></a>
-          <h4 class="price">¥ 3,980</h4>
-          <img src="../assets/rating_4.svg">
-          <a 
-            href="#" 
-            class="number-link">（100）</a>
-          <div class="columns is-variable is-2 button-container">
-            <div class="column is-10">
-              <a class="button is-primary is-fullwidth">
-                <span class="icon">
-                  <img 
-                    src="../assets/cart.svg" 
-                    class="right-icon"></span>
-                <span>カートに追加</span>
-              </a>
-            </div>
-            <div class="column is-2">
-              <a class="button has-background-grey-lighter">
-                <span class="icon">
-                  <img 
-                    src="../assets/HeartLine.svg" 
-                    class="right-icon"
-                ></span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="column is-12-mobile is-3-tablet is-one-fifth-desktop">
-          <a href="#"><img 
-            src="../assets/pot.jpg" 
-            alt="電気ポット"></a>
-          <a 
-            href="#" 
-            class="small-name">Shop name</a>
-          <a href="#"><h3 class="goods-name">ティファール 電気ケトル「アプレシア プラス」</h3></a>
-          <h4 class="price">¥ 3,980</h4>
-          <img src="../assets/rating_4.svg">
-          <a 
-            href="#" 
-            class="number-link">（100）</a>
-          <div class="columns is-variable is-2 button-container">
-            <div class="column is-10">
-              <a class="button is-primary is-fullwidth">
-                <span class="icon">
-                  <img 
-                    src="../assets/cart.svg" 
-                    class="right-icon"></span>
-                <span>カートに追加</span>
-              </a>
-            </div>
-            <div class="column is-2">
-              <a class="button has-background-grey-lighter">
-                <span class="icon">
-                  <img 
-                    src="../assets/HeartLine.svg" 
-                    class="right-icon"
-                ></span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="column is-12-mobile is-3-tablet is-one-fifth-desktop">
-          <a href="#"><img 
-            src="../assets/pot.jpg" 
-            alt="電気ポット"></a>
-          <a 
-            href="#" 
-            class="small-name">Shop name</a>
-          <a href="#"><h3 class="goods-name">ティファール 電気ケトル「アプレシア プラス」</h3></a>
-          <h4 class="price">¥ 3,980</h4>
-          <img src="../assets/rating_4.svg">
-          <a 
-            href="#" 
-            class="number-link">（100）</a>
-          <div class="columns is-variable is-2 button-container">
-            <div class="column is-10">
-              <a class="button is-primary is-fullwidth">
-                <span class="icon">
-                  <img 
-                    src="../assets/cart.svg" 
-                    class="right-icon"></span>
-                <span>カートに追加</span>
-              </a>
-            </div>
-            <div class="column is-2">
-              <a class="button has-background-grey-lighter">
-                <span class="icon">
-                  <img 
-                    src="../assets/HeartLine.svg" 
-                    class="right-icon"
-                ></span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="column is-12-mobile is-3-tablet is-one-fifth-desktop">
-          <a href="#"><img 
-            src="../assets/pot.jpg" 
-            alt="電気ポット"></a>
-          <a 
-            href="#" 
-            class="small-name">Shop name</a>
-          <a href="#"><h3 class="goods-name">ティファール 電気ケトル「アプレシア プラス」</h3></a>
-          <h4 class="price">¥ 3,980</h4>
-          <img src="../assets/rating_4.svg">
-          <a 
-            href="#" 
-            class="number-link">（100）</a>
-          <div class="columns is-variable is-2 button-container">
-            <div class="column is-10">
-              <a class="button is-primary is-fullwidth">
-                <span class="icon">
-                  <img 
-                    src="../assets/cart.svg" 
-                    class="right-icon"></span>
-                <span>カートに追加</span>
-              </a>
-            </div>
-            <div class="column is-2">
-              <a class="button has-background-grey-lighter">
-                <span class="icon">
-                  <img 
-                    src="../assets/HeartLine.svg" 
-                    class="right-icon"
-                ></span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="column is-12-mobile is-3-tablet is-one-fifth-desktop">
-          <a href="#"><img 
-            src="../assets/pot.jpg" 
-            alt="電気ポット"></a>
-          <a 
-            href="#" 
-            class="small-name">Shop name</a>
-          <a href="#"><h3 class="goods-name">ティファール 電気ケトル「アプレシア プラス」</h3></a>
-          <h4 class="price">¥ 3,980</h4>
-          <img src="../assets/rating_4.svg">
-          <a 
-            href="#" 
-            class="number-link">（100）</a>
-          <div class="columns is-variable is-2 button-container">
-            <div class="column is-10">
-              <a class="button is-primary is-fullwidth">
-                <span class="icon">
-                  <img 
-                    src="../assets/cart.svg" 
-                    class="right-icon"></span>
-                <span>カートに追加</span>
-              </a>
-            </div>
-            <div class="column is-2">
-              <a class="button has-background-grey-lighter">
-                <span class="icon">
-                  <img 
-                    src="../assets/HeartLine.svg" 
-                    class="right-icon"
-                ></span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="column is-12-mobile is-3-tablet is-one-fifth-desktop">
-          <a href="#"><img 
-            src="../assets/pot.jpg" 
-            alt="電気ポット"></a>
-          <a 
-            href="#" 
-            class="small-name">Shop name</a>
-          <a href="#"><h3 class="goods-name">ティファール 電気ケトル「アプレシア プラス」</h3></a>
-          <h4 class="price">¥ 3,980</h4>
-          <img src="../assets/rating_4.svg">
-          <a 
-            href="#" 
-            class="number-link">（100）</a>
-          <div class="columns is-variable is-2 button-container">
-            <div class="column is-10">
-              <a class="button is-primary is-fullwidth">
-                <span class="icon">
-                  <img 
-                    src="../assets/cart.svg" 
-                    class="right-icon"></span>
-                <span>カートに追加</span>
-              </a>
-            </div>
-            <div class="column is-2">
-              <a class="button has-background-grey-lighter">
-                <span class="icon">
-                  <img 
-                    src="../assets/HeartLine.svg" 
-                    class="right-icon"
-                ></span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="column is-12-mobile is-3-tablet is-one-fifth-desktop">
-          <a href="#"><img 
-            src="../assets/pot.jpg" 
-            alt="電気ポット"></a>
-          <a 
-            href="#" 
-            class="small-name">Shop name</a>
-          <a href="#"><h3 class="goods-name">ティファール 電気ケトル「アプレシア プラス」</h3></a>
-          <h4 class="price">¥ 3,980</h4>
-          <img src="../assets/rating_4.svg">
-          <a 
-            href="#" 
-            class="number-link">（100）</a>
-          <div class="columns is-variable is-2 button-container">
-            <div class="column is-10">
-              <a class="button is-primary is-fullwidth">
-                <span class="icon">
-                  <img 
-                    src="../assets/cart.svg" 
-                    class="right-icon"></span>
-                <span>カートに追加</span>
-              </a>
-            </div>
-            <div class="column is-2">
-              <a class="button has-background-grey-lighter">
-                <span class="icon">
-                  <img 
-                    src="../assets/HeartLine.svg" 
-                    class="right-icon"
-                ></span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="column is-12-mobile is-3-tablet is-one-fifth-desktop">
-          <a href="#"><img 
-            src="../assets/pot.jpg" 
-            alt="電気ポット"></a>
-          <a 
-            href="#" 
-            class="small-name">Shop name</a>
-          <a href="#"><h3 class="goods-name">ティファール 電気ケトル「アプレシア プラス」</h3></a>
-          <h4 class="price">¥ 3,980</h4>
-          <img src="../assets/rating_4.svg">
-          <a 
-            href="#" 
-            class="number-link">（100）</a>
-          <div class="columns is-variable is-2 button-container">
-            <div class="column is-10">
-              <a class="button is-primary is-fullwidth">
-                <span class="icon">
-                  <img 
-                    src="../assets/cart.svg" 
-                    class="right-icon"></span>
-                <span>カートに追加</span>
-              </a>
-            </div>
-            <div class="column is-2">
-              <a class="button has-background-grey-lighter">
-                <span class="icon">
-                  <img 
-                    src="../assets/HeartLine.svg" 
-                    class="right-icon"
-                ></span>
-              </a>
-            </div>
-          </div>
-        </div>
-
       </div>
-
-      
-      <b-pagination 
-        :total="total"
-        :current.sync="current"
-        :order="order"
-        :size="size"
-        :simple="isSimple"
-        :rounded="isRounded"
-        :per-page="perPage"/>
+      <!-- Grid Items -->
+      <div class="columns is-multiline is-variable is-6">
+        <!-- Grid Item -->
+        <div class="column is-12-mobile is-3-tablet is-one-fifth-desktop">
+          <a href="#"><img 
+            src="../assets/pot.jpg" 
+            alt="電気ポット"></a>
+          <a 
+            href="#" 
+            class="small-name">Shop name</a>
+          <a href="#"><h3 class="goods-name">ティファール 電気ケトル「アプレシア プラス」</h3></a>
+          <h4 class="price">¥ 3,980</h4>
+          <img src="../assets/rating_4.svg">
+          <a 
+            href="#" 
+            class="number-link">（100）</a>
+          <div class="columns is-variable is-2 button-container">
+            <div class="column is-10">
+              <a class="button is-primary is-fullwidth">
+                <span class="icon">
+                  <img 
+                    src="../assets/cart.svg" 
+                    class="right-icon"></span>
+                <span>カートに追加</span>
+              </a>
+            </div>
+            <div class="column is-2">
+              <a class="button has-background-grey-lighter">
+                <span class="icon">
+                  <img 
+                    src="../assets/HeartLine.svg" 
+                    class="right-icon"
+                ></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Grid Item -->
+        <div class="column is-12-mobile is-3-tablet is-one-fifth-desktop">
+          <a href="#"><img 
+            src="../assets/pot.jpg" 
+            alt="電気ポット"></a>
+          <a 
+            href="#" 
+            class="small-name">Shop name</a>
+          <a href="#"><h3 class="goods-name">ティファール 電気ケトル「アプレシア プラス」</h3></a>
+          <h4 class="price">¥ 3,980</h4>
+          <img src="../assets/rating_4.svg">
+          <a 
+            href="#" 
+            class="number-link">（100）</a>
+          <div class="columns is-variable is-2 button-container">
+            <div class="column is-10">
+              <a class="button is-primary is-fullwidth">
+                <span class="icon">
+                  <img 
+                    src="../assets/cart.svg" 
+                    class="right-icon"></span>
+                <span>カートに追加</span>
+              </a>
+            </div>
+            <div class="column is-2">
+              <a class="button has-background-grey-lighter">
+                <span class="icon">
+                  <img 
+                    src="../assets/HeartLine.svg" 
+                    class="right-icon"
+                ></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Grid Item -->
+        <div class="column is-12-mobile is-3-tablet is-one-fifth-desktop">
+          <a href="#"><img 
+            src="../assets/pot.jpg" 
+            alt="電気ポット"></a>
+          <a 
+            href="#" 
+            class="small-name">Shop name</a>
+          <a href="#"><h3 class="goods-name">ティファール 電気ケトル「アプレシア プラス」</h3></a>
+          <h4 class="price">¥ 3,980</h4>
+          <img src="../assets/rating_4.svg">
+          <a 
+            href="#" 
+            class="number-link">（100）</a>
+          <div class="columns is-variable is-2 button-container">
+            <div class="column is-10">
+              <a class="button is-primary is-fullwidth">
+                <span class="icon">
+                  <img 
+                    src="../assets/cart.svg" 
+                    class="right-icon"></span>
+                <span>カートに追加</span>
+              </a>
+            </div>
+            <div class="column is-2">
+              <a class="button has-background-grey-lighter">
+                <span class="icon">
+                  <img 
+                    src="../assets/HeartLine.svg" 
+                    class="right-icon"
+                ></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Grid Item -->
+        <div class="column is-12-mobile is-3-tablet is-one-fifth-desktop">
+          <a href="#"><img 
+            src="../assets/pot.jpg" 
+            alt="電気ポット"></a>
+          <a 
+            href="#" 
+            class="small-name">Shop name</a>
+          <a href="#"><h3 class="goods-name">ティファール 電気ケトル「アプレシア プラス」</h3></a>
+          <h4 class="price">¥ 3,980</h4>
+          <img src="../assets/rating_4.svg">
+          <a 
+            href="#" 
+            class="number-link">（100）</a>
+          <div class="columns is-variable is-2 button-container">
+            <div class="column is-10">
+              <a class="button is-primary is-fullwidth">
+                <span class="icon">
+                  <img 
+                    src="../assets/cart.svg" 
+                    class="right-icon"></span>
+                <span>カートに追加</span>
+              </a>
+            </div>
+            <div class="column is-2">
+              <a class="button has-background-grey-lighter">
+                <span class="icon">
+                  <img 
+                    src="../assets/HeartLine.svg" 
+                    class="right-icon"
+                ></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Grid Item -->
+        <div class="column is-12-mobile is-3-tablet is-one-fifth-desktop">
+          <a href="#"><img 
+            src="../assets/pot.jpg" 
+            alt="電気ポット"></a>
+          <a 
+            href="#" 
+            class="small-name">Shop name</a>
+          <a href="#"><h3 class="goods-name">ティファール 電気ケトル「アプレシア プラス」</h3></a>
+          <h4 class="price">¥ 3,980</h4>
+          <img src="../assets/rating_4.svg">
+          <a 
+            href="#" 
+            class="number-link">（100）</a>
+          <div class="columns is-variable is-2 button-container">
+            <div class="column is-10">
+              <a class="button is-primary is-fullwidth">
+                <span class="icon">
+                  <img 
+                    src="../assets/cart.svg" 
+                    class="right-icon"></span>
+                <span>カートに追加</span>
+              </a>
+            </div>
+            <div class="column is-2">
+              <a class="button has-background-grey-lighter">
+                <span class="icon">
+                  <img 
+                    src="../assets/HeartLine.svg" 
+                    class="right-icon"
+                ></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Grid Item -->
+        <div class="column is-12-mobile is-3-tablet is-one-fifth-desktop">
+          <a href="#"><img 
+            src="../assets/pot.jpg" 
+            alt="電気ポット"></a>
+          <a 
+            href="#" 
+            class="small-name">Shop name</a>
+          <a href="#"><h3 class="goods-name">ティファール 電気ケトル「アプレシア プラス」</h3></a>
+          <h4 class="price">¥ 3,980</h4>
+          <img src="../assets/rating_4.svg">
+          <a 
+            href="#" 
+            class="number-link">（100）</a>
+          <div class="columns is-variable is-2 button-container">
+            <div class="column is-10">
+              <a class="button is-primary is-fullwidth">
+                <span class="icon">
+                  <img 
+                    src="../assets/cart.svg" 
+                    class="right-icon"></span>
+                <span>カートに追加</span>
+              </a>
+            </div>
+            <div class="column is-2">
+              <a class="button has-background-grey-lighter">
+                <span class="icon">
+                  <img 
+                    src="../assets/HeartLine.svg" 
+                    class="right-icon"
+                ></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Grid Item -->
+        <div class="column is-12-mobile is-3-tablet is-one-fifth-desktop">
+          <a href="#"><img 
+            src="../assets/pot.jpg" 
+            alt="電気ポット"></a>
+          <a 
+            href="#" 
+            class="small-name">Shop name</a>
+          <a href="#"><h3 class="goods-name">ティファール 電気ケトル「アプレシア プラス」</h3></a>
+          <h4 class="price">¥ 3,980</h4>
+          <img src="../assets/rating_4.svg">
+          <a 
+            href="#" 
+            class="number-link">（100）</a>
+          <div class="columns is-variable is-2 button-container">
+            <div class="column is-10">
+              <a class="button is-primary is-fullwidth">
+                <span class="icon">
+                  <img 
+                    src="../assets/cart.svg" 
+                    class="right-icon"></span>
+                <span>カートに追加</span>
+              </a>
+            </div>
+            <div class="column is-2">
+              <a class="button has-background-grey-lighter">
+                <span class="icon">
+                  <img 
+                    src="../assets/HeartLine.svg" 
+                    class="right-icon"
+                ></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Grid Item -->
+        <div class="column is-12-mobile is-3-tablet is-one-fifth-desktop">
+          <a href="#"><img 
+            src="../assets/pot.jpg" 
+            alt="電気ポット"></a>
+          <a 
+            href="#" 
+            class="small-name">Shop name</a>
+          <a href="#"><h3 class="goods-name">ティファール 電気ケトル「アプレシア プラス」</h3></a>
+          <h4 class="price">¥ 3,980</h4>
+          <img src="../assets/rating_4.svg">
+          <a 
+            href="#" 
+            class="number-link">（100）</a>
+          <div class="columns is-variable is-2 button-container">
+            <div class="column is-10">
+              <a class="button is-primary is-fullwidth">
+                <span class="icon">
+                  <img 
+                    src="../assets/cart.svg" 
+                    class="right-icon"></span>
+                <span>カートに追加</span>
+              </a>
+            </div>
+            <div class="column is-2">
+              <a class="button has-background-grey-lighter">
+                <span class="icon">
+                  <img 
+                    src="../assets/HeartLine.svg" 
+                    class="right-icon"
+                ></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Grid Item -->
+        <div class="column is-12-mobile is-3-tablet is-one-fifth-desktop">
+          <a href="#"><img 
+            src="../assets/pot.jpg" 
+            alt="電気ポット"></a>
+          <a 
+            href="#" 
+            class="small-name">Shop name</a>
+          <a href="#"><h3 class="goods-name">ティファール 電気ケトル「アプレシア プラス」</h3></a>
+          <h4 class="price">¥ 3,980</h4>
+          <img src="../assets/rating_4.svg">
+          <a 
+            href="#" 
+            class="number-link">（100）</a>
+          <div class="columns is-variable is-2 button-container">
+            <div class="column is-10">
+              <a class="button is-primary is-fullwidth">
+                <span class="icon">
+                  <img 
+                    src="../assets/cart.svg" 
+                    class="right-icon"></span>
+                <span>カートに追加</span>
+              </a>
+            </div>
+            <div class="column is-2">
+              <a class="button has-background-grey-lighter">
+                <span class="icon">
+                  <img 
+                    src="../assets/HeartLine.svg" 
+                    class="right-icon"
+                ></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Grid Item -->
+        <div class="column is-12-mobile is-3-tablet is-one-fifth-desktop">
+          <a href="#"><img 
+            src="../assets/pot.jpg" 
+            alt="電気ポット"></a>
+          <a 
+            href="#" 
+            class="small-name">Shop name</a>
+          <a href="#"><h3 class="goods-name">ティファール 電気ケトル「アプレシア プラス」</h3></a>
+          <h4 class="price">¥ 3,980</h4>
+          <img src="../assets/rating_4.svg">
+          <a 
+            href="#" 
+            class="number-link">（100）</a>
+          <div class="columns is-variable is-2 button-container">
+            <div class="column is-10">
+              <a class="button is-primary is-fullwidth">
+                <span class="icon">
+                  <img 
+                    src="../assets/cart.svg" 
+                    class="right-icon"></span>
+                <span>カートに追加</span>
+              </a>
+            </div>
+            <div class="column is-2">
+              <a class="button has-background-grey-lighter">
+                <span class="icon">
+                  <img 
+                    src="../assets/HeartLine.svg" 
+                    class="right-icon"
+                ></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- pagination -->
+      <div class="page-box column is-6">
+        <b-pagination 
+          :total="total"
+          :current.sync="current"
+          :order="order"
+          :size="size"
+          :simple="isSimple"
+          :rounded="isRounded"
+          :per-page="perPage"/>
+      </div>
 
     </section>
   </div>
-  
 </template>
 
 <script>
@@ -399,22 +426,29 @@ export default {
 </script>
 
 <style lang="scss">
-.container {
-  width: 1200px;
+//  Hero
+.top-image {
+  background: url('../assets/top_banner.jpg');
+  background-position: center;
+  margin-bottom: 56px;
+  position: relative;
 }
-
+.arrow-box {
+  width: 100%;
+}
+.to-left,
+.to-right {
+  position: absolute;
+}
+.to-left {
+  left: 1rem;
+}
+.to-right {
+  right: 1rem;
+}
+// Grid item
 .new-item {
   margin-bottom: 10rem;
-}
-.top-image {
-  padding-bottom: 56px;
-}
-
-h2 {
-  display: inline-block;
-  text-align: left;
-  font-size: 1.7rem;
-  font-weight: bold;
 }
 
 .goods-name {
@@ -447,11 +481,7 @@ h2 {
   margin-top: 1px;
 }
 
-.button {
-  font-weight: bold;
-}
-
-.pagenation {
-  margin-top: 10rem;
+.page-box {
+  margin: 0 auto;
 }
 </style>
