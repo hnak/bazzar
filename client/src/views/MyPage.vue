@@ -8,7 +8,7 @@
             <h1 class="title is-4">マイページ</h1>
           </div>
         </div>
-        <div class="columns">
+        <div class="columns is-variable is-8">
           <!-- Menu -->
           <div class="column is-3 is-offset-1">
             <sidemenu/>
@@ -18,23 +18,34 @@
             <h3 class="title is-5">会員情報
               <hr class="bold-line">
             </h3>
-            
-            <div class="content">
-              <table class="table-profile">
-                <tr>
-                  <td>名前</td>
-                  <td>山田太郎</td>
-                </tr>
-                <tr>
-                  <td>メールアドレス</td>
-                  <td>minion@despicable.me</td>
-                </tr>
-                <tr>
-                  <td>パスワード</td>
-                  <td>*******</td>
-                </tr>
-              </table>
+            <div class="content-box">
+              <div class="content">
+                <table class="table-profile">
+                  <tr>
+                    <td>名前</td>
+                    <td class="has-text-weight-bold">山田太郎</td>
+                    <td><a 
+                      href="#"
+                      class="button is-outlined">変更</a></td> 
+                  </tr>
+                  <tr>
+                    <td>メールアドレス</td>
+                    <td class="has-text-weight-bold">minion@despicable.me</td>
+                    <td><a 
+                      href="#" 
+                      class="button is-outlined">変更</a></td>
+                  </tr>
+                  <tr>
+                    <td>パスワード</td>
+                    <td class="has-text-weight-bold">*******</td>
+                    <td><a 
+                      href="#" 
+                      class="button is-outlined">変更</a></td>
+                  </tr>
+                </table>
+              </div>
             </div>
+            <!-- address -->
             <h3 class="title is-5">お届け先
               <hr class="bold-line">
             </h3>
@@ -124,17 +135,24 @@ export default class MyPage extends Vue {
 }
 </script>
 <style lang="scss">
+.content-box {
+  margin-bottom: 4rem;
+}
+
 hr {
   border: none;
   background-color: #e4e4e5;
   margin: 0.5rem 0 1.5rem 0;
 }
+
+.table-profile tr {
+  height: 4rem;
+}
+
 .bold-line {
   height: 0.25rem;
-  border: none;
-  background-color: #e4e4e5;
-  margin: 0.5rem 0 1.5rem 0;
 }
+
 .menu {
   padding: 1rem;
 }

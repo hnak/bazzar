@@ -56,10 +56,33 @@ $link: $primary;
 $link-invert: $primary-invert;
 $link-focus-border: $primary;
 
+// contorol
+$control-radius: $radius-small;
+
+// menu
+$menu-item-radius: 0;
+
 // Import Bulma and Buefy styles
 @import '~bulma';
 @import '~buefy/src/scss/buefy';
 html {
   font-size: 14px;
+}
+.section-title {
+  display: inline-block;
+  text-align: left;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+.button {
+  font-weight: bold;
+}
+.m-button {
+  height: 40px;
+  padding: 0 2rem;
+}
+.s-button {
+  height: 32px;
+  padding: 0 1rem;
 }
 </style>
