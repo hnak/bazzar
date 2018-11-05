@@ -13,49 +13,51 @@
           </a>
           <!-- burger menu -->
           <a 
+            :class="{ 'is-active': showNav }" 
             role="button" 
-            class="navbar-burger burger has-text-white" 
+            class="navbar-burger burger has-text-white"
             aria-label="menu" 
             aria-expanded="false" 
-            data-target="navbarMenu">
+            @click="showNav = !showNav">
             <span aria-hidden="true"/>
             <span aria-hidden="true"/>
             <span aria-hidden="true"/>
           </a>
         </div>
-        <!-- category -->
-        <div class="navbar-start">
-          <div class="navbar-item has-dropdown is-hoverable is-mobile-modal">
-            <a class="navbar-link">カテゴリ</a>
-            <div class="navbar-dropdown">
-              <a class="navbar-item">ファッション</a>
-              <a class="navbar-item">エンタメ・デジタル家電</a>
-              <a class="navbar-item">グルメ</a>
-              <a class="navbar-item">美容・健康</a>
-              <a class="navbar-item">車・スポーツ</a>
-            </div>
-          </div>
-          <!-- Search box -->
-          <div class="navbar-item">
-            <div class="field has-addons search-box">
-              <div class="control">
-                <input 
-                  class="input" 
-                  type="search"
-                  placeholder="キーワードから探す">
-              </div>
-              <div class="control">
-                <a class="button is-light">
-                  <span class="icon is-medium">
-                    <img 
-                      src="../assets/Search.svg" 
-                      alt="検索"></span></a>
+        <div
+          :class="{ 'is-active': showNav }"
+          class="navbar-menu">
+          <!-- category -->
+          <div class="navbar-start">
+            <div class="navbar-item has-dropdown is-hoverable is-mobile-modal">
+              <a class="navbar-link">カテゴリ</a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item">ファッション</a>
+                <a class="navbar-item">エンタメ・デジタル家電</a>
+                <a class="navbar-item">グルメ</a>
+                <a class="navbar-item">美容・健康</a>
+                <a class="navbar-item">車・スポーツ</a>
               </div>
             </div>
-          </div>
-          <div 
-            id="navbarMenu" 
-            class="navbar-menu">
+            <!-- Search box -->
+            <div class="navbar-item">
+              <div class="field has-addons search-box">
+                <div class="control">
+                  <input 
+                    class="input" 
+                    type="search"
+                    placeholder="キーワードから探す">
+                </div>
+                <div class="control">
+                  <a class="button is-light">
+                    <span class="icon is-medium">
+                      <img 
+                        src="../assets/Search.svg" 
+                        alt="検索"></span></a>
+                </div>
+              </div>
+            </div>
+          
             <!-- detail search -->
             <div class="navbar-item">
               <b-dropdown>
@@ -154,8 +156,8 @@
         </div>
         <!-- detail search form end -->
         <!-- Right side -->
-        <div 
-          id="navbarMenu" 
+        <div
+          :class="{ 'is-active': showNav }"
           class="navbar-menu">
           <div class="navbar-end">
             <div class="navbar-item has-dropdown is-hoverable">
@@ -212,7 +214,9 @@ import myfooter from '@/components/MyFooter.vue';
     myfooter
   }
 })
-export default class MenuFrame extends Vue {}
+export default class MenuFrame extends Vue {
+  showNav = false;
+}
 </script>
 
 <style lang="scss">
